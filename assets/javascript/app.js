@@ -11,6 +11,8 @@ $(document).ready(function () {
 
         function buildParam(e) {
             e.preventDefault();
+            clear();
+            //
             var obj = {};
             obj['api-key'] = "1b7ba91a999e47e8b6f0faf9f992034f";
             if ($('#searchTerm').val()) obj.q = $("#searchTerm").val();
@@ -52,6 +54,10 @@ $(document).ready(function () {
                 <a href="`+ url + `" class="card-link">` + url + `</a>
             </div>
         </div>`)
+        }
+
+        function clear(){
+            $("#article-container").empty();
         }
 
         function searchYear(year) {
